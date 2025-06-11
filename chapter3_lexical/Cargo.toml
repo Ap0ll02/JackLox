@@ -3,6 +3,11 @@ name = "chapter3_lexical"
 version = "0.1.0"
 edition = "2024"
 
+description = "A lexical analyzer that returns the tokens you wrote!"
+license = "MIT"
+authors = ["Jack jackratermann@gmail.com"]
+keywords = ["cli", "compilers", "lexical analysis"]
+
 [dependencies]
 crossterm = "0.29.0"
 rustyline = "16.0.0"
