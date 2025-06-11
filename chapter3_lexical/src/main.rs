@@ -4,8 +4,7 @@ use std::thread;
 use std::time::Duration;
 use crossterm::event::{self, Event, KeyCode};
 use crossterm::terminal::{disable_raw_mode, enable_raw_mode, size};
-use crossterm::{
-    cursor,
+use crossterm::{ cursor,
     execute,
     terminal::{Clear, ClearType},
 };
@@ -68,7 +67,6 @@ fn main() -> io::Result<()> {
 
     let mut tokens: Vec<Token> = Vec::new();
     loop {
-
         execute!(
             stdout,
             cursor::MoveTo(0, 0),
@@ -80,8 +78,7 @@ fn main() -> io::Result<()> {
         execute!(stdout, Clear(ClearType::CurrentLine), cursor::MoveTo(0, 2))?;
         print!("{}", input);
         stdout.flush()?;
-
-
+        last_token = scanner(&input, &mut tokens);
         if event::poll(Duration::from_millis(200))? {
             if let Event::Key(key_event) = event::read()? {
                 match key_event.code {
@@ -100,11 +97,12 @@ fn main() -> io::Result<()> {
                 }
             }
         }
-        last_token = scanner(&input, &mut tokens);
     }
+    // Outside of the loop
     tokens.clear();
     disable_raw_mode()?;
     scanner(&input, &mut tokens);
+    // Printing Setup
     let (width, height) = size()?;
     let mut _token: TokenType = TokenType::If;
     execute!(stdout, Clear(ClearType::All), cursor::MoveTo(width / 2 - 20, height/2 - 5))?;
@@ -164,5 +162,5 @@ fn tokenize(t: TokenType, lex: String, pos: Option<usize>, token: &mut TokenType
         lexeme: lex,
         pos: pos.unwrap_or(0) as i8,
     });
-    *token = tokens[0].t_type.clone();
+    *token = tokens[tokens.len() - 1].t_type.clone();
 }
