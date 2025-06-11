@@ -25,3 +25,7 @@ Interface must implement the visit methods
 Each of the expressions must implement their own abstract visit method.
 
 The expressions visitor must implement the visit concretely.
+
+# Chapter 3 Excercises
+
+Lexical Analyzer for example 3.10 is in the Chapter3 folder, please look in that README for how to run the program!
