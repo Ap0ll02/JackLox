@@ -1,1 +1,0 @@
-/home/apollo/Code/JackLox/chapter3_lexical/target/package/chapter3_lexical-0.1.0/target/debug/chapter3_lexical: /home/apollo/Code/JackLox/chapter3_lexical/target/package/chapter3_lexical-0.1.0/src/main.rs
