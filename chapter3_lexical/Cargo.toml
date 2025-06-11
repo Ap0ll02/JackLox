@@ -6,7 +6,7 @@ edition = "2024"
 description = "A lexical analyzer that returns the tokens you wrote!"
 license = "MIT"
 authors = ["Jack jackratermann@gmail.com"]
-keywords = ["cli", "compilers", "lexical analysis"]
+keywords = ["cli", "compilers", "lexical", "analysis"]
 
 [dependencies]
 crossterm = "0.29.0"
