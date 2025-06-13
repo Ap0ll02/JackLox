@@ -17,3 +17,23 @@ To run this crate, simply use (assuming default paths)
 
 If your path differs please note I am using the default path assumption, it is up to you to run it 
 from a custom path.
+
+## Flags and Usability
+
+Add a flag to ignore the introduction text if you'd like quicker access to the live lexing.
+
+Simply run your rust program with whichever path you need (I will show as if the path is in your shells $PATH)
+
+```
+chapter3_lexical -q
+chapter3_lexical --quick
+```
+
+Using either flag `-q` or `--quick` you can bypass the introduction
+
+## Ending your input 
+
+To stop input you have a few options, such as 
+- standard process killing with `ctrl+c`
+- Hitting <ENTER> 
+- Typing a valid lexme for the recognized token type "EOF", which can be any capitalization of "eof"
