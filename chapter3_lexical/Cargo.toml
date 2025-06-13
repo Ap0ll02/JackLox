@@ -1,6 +1,6 @@
 [package]
 name = "chapter3_lexical"
-version = "0.1.2"
+version = "0.2.0"
 edition = "2024"
 
 description = "A lexical analyzer that returns the tokens you wrote!"
