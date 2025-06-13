@@ -67,9 +67,11 @@ fn main() -> io::Result<()> {
     // Arguments and flags
     let mut play_intro: bool = true;
     let args: Vec<String> = std::env::args().collect();
-    match args[1].as_str() {
-        "-q" | "--quick" => play_intro = false,
-        _ => {},
+    if args.len() >= 2 {
+        match args[1].as_str() {
+            "-q" | "--quick" => play_intro = false,
+            _ => play_intro = true,
+        }
     }
     if play_intro { intro()? };
 
