@@ -1,0 +1,12 @@
+[package]
+name = "dragon_rd_parser"
+version = "0.1.0"
+edition = "2024"
+
+description = "A Recursive Descent Parser Based Loosely On The Dragon Compiler Book. You can type an id operator id expression to see how it would get parsed."
+license = "MIT"
+authors = ["Jack jackratermann@gmail.com"]
+keywords = ["cli", "compilers", "parser", "syntax", "recursive", "descent"]
+
+[dependencies]
+colored = "3.0.0"

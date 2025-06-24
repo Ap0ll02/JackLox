@@ -6,7 +6,7 @@ edition = "2024"
 description = "A Recursive Descent Parser Based Loosely On The Dragon Compiler Book. You can type an id operator id expression to see how it would get parsed."
 license = "MIT"
 authors = ["Jack jackratermann@gmail.com"]
-keywords = ["cli", "compilers", "parser", "syntax", "recursive", "descent"]
+keywords = ["cli", "parser", "recursive", "descent"]
 
 [dependencies]
 colored = "3.0.0"
