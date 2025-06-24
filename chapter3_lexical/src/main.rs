@@ -204,3 +204,14 @@ fn tokenize(t: TokenType, lex: String, pos: Option<usize>, token: &mut TokenType
     });
     *token = tokens[tokens.len() - 1].t_type.clone();
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn run_no_flag() {
+        let args = vec!["chapter3_lexical".to_string()];
+        assert_eq!(main(&args), "no flag");
+    }
+}
